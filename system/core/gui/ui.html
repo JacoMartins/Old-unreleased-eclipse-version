@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../resources/css/themes/fluent.css">
+		<link rel="stylesheet" type="text/css" href="../../boot/boot.css">
+		<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+		<script type="text/javascript" src="../menuconfig.js"></script>
+		<script type="text/javascript" src="../boot.js"></script>
+		<script type="text/javascript" src="../progress.js"></script>
+	</head>
+	<body>
+		<title>CES - UI</title>
+			<div class="bootscreen">
+				<a class="logotext">CHEETAH</a>
+				<a id ="estext" class="text">Emulated System</a>
+				<div class="progressbar" id="progressbar">
+					<div class="progress" id="progress">
+					</div>
+					<input type="hidden" id="progress_width" value="0">
+				</div>
+			</div>
+			<div class="taskbar blur">
+				<button class="taskbutton" id="menu" onclick="menutoggle()">
+				</button>
+				<div class="find-input-container">
+					<div id="find-input-plataform">
+						<div id="find-input-plataform-icon">
+						</div>
+					</div>
+					<input type="text" class="find-input-field" placeholder="Find on cloud" onkeypress="findmenutoggle()"></input>
+				</div>
+				<button class="taskbutton" id="settings" onclick="settingsmenutoggle()">
+				</button>
+				<button class="taskbutton" id="notifications" onclick="notificationsmenutoggle()">
+				</button>
+			</div>
+			<div class="menu blur" id="systemmenu">
+				<button class="menubutton">Calculator</button>
+				<button class="menubutton">Command Prompt</button>
+				<button class="menubutton">Escriber</button>
+				<button class="menubutton">Media Player</button>
+				<button class="menubutton">Settings</button>
+				<button class="menubutton">Workspace</button>
+				<button class="menubutton">Visio</button>
+				<button class="menubutton" style="font-family: Roboto Bold; padding-left: 0px; height: 45px;;">
+					<div class="userpicture" style="top: 6px; left: 12px;"></div>
+					<a class="inftext" style="position: absolute; top: 6px; left: 52px; font-size: 14px;">Jaco Martins</a>
+					<a class="inftext" style="position: absolute; top: 22px; left: 52px; font-family: Roboto Light; font-size: 15px;">Administrator</a>
+				</button>
+			</div>
+			
+			<div class="settingsmenu blur" id="systemsettingsmenu">
+				<div class="settingsmenu-header header">Settings</div>
+				<button class="menubutton">Customization</button>
+				<button class="menubutton">Profile</button>
+				<button class="menubutton">Language</button>
+				<button class="menubutton">About</button>
+			</div>
+			
+			<div class="notificationsmenu blur" id="systemnotificationsmenu">
+					<div class="notmenu-header header">Notifications</div>
+					<button class="notificationbutton">
+						<div class="notification-header header">Welcome to cheetah 5.0!</div>
+						<div class="notification-content">I can see you joined to cheetah recently. Wanna go to a tour or tutorial?
+						</div>
+					</button>
+					<button class="menubutton">Clear all</button>
+			</div>
+			
+			<div class="findmenu blur">
+				<div class="findmenu-header header" id="systemfindmenu">Results for</div>
+				<button class="findmenubutton">Result1</button>
+			</div>
+			<div class="desktop-icon">
+				<div class="desktop-icon-picture"></div>
+			</div>
+	</body>
+</html>

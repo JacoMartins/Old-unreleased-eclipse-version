@@ -1,0 +1,531 @@
+@font-face {
+  font-family: Roboto;
+  src: url("../../../fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("../../../fonts/Roboto-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Roboto Bold;
+  src: url("../../../fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Roboto Bold Italic;
+  src: url("../../../fonts/Roboto-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Roboto Thin;
+  src: url("../../../fonts/Roboto-Thin.ttf") format("truetype");
+  font-weight: thin;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Roboto Thin Italic;
+  src: url("../../../../fonts/Roboto-ThinItalic.ttf"), format("truetype");
+  font-weight: thin;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Roboto Light;
+  src: url("../../../../fonts/Roboto-Light.ttf"), format("truetype");
+  font-weight: light;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Roboto Light Italic;
+  src: url("../../../../fonts/Roboto-LightItalic.ttf"), format("truetype");
+  font-weight: light;
+  font-style: italic;
+}
+
+body {
+	background-color: black;
+	background-image: url("../../web/background/oobe.adapted.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	overflow: hidden;
+}
+
+.inftext {
+	font-family: Roboto Bold;
+	font-size: 16px;
+}
+
+.text {
+	font-family: Roboto;
+	font-size: 16px;
+}
+
+.textinput {
+	position: absolute;
+	font-family: Roboto Light;
+	font-size: 16px;
+	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+	padding-left: 10px;
+	top: 7.5%;
+	left: 90px;
+	height: 32px;
+	width: 100%;
+	border-radius: 5px;
+	border: 0px;
+}
+
+.find-input-field {
+	position: absolute;
+	outline: none;
+	font-family: Roboto Light;
+	font-size: 16px;
+	background-color: rgba(255, 255, 255, .6);
+	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+	padding-left: 10px;
+	top: 7.5%;
+	left: 120px;
+	height: 28px;
+	width: 14%;
+	z-index: 9;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border: 0px;
+}
+
+.find-input-field:hover {
+	position: absolute;
+	font-family: Roboto Light;
+	font-size: 16px;
+	background-color: rgba(255, 255, 255, .8);
+	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+	padding-left: 10px;
+	top: 7.5%;
+	left: 120px;
+	height: 28px;
+	width: 14%;
+	border: 0px;
+}
+
+.find-input-field:focus {
+	position: absolute;
+	font-family: Roboto Light;
+	font-size: 16px;
+	background-color: rgba(255, 255, 255, 1);
+	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+	padding-left: 10px;
+	top: 7.5%;
+	left: 120px;
+	height: 28px;
+	width: 14%;
+	border: 0px;
+}
+
+
+#find-input-plataform {
+	position: absolute;
+	font-size: 16px;
+	background-color: rgba(255, 255, 255, .6);
+	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+	top: 7.5%;
+	left: 90px;
+	height: 30px;
+	width: 30px;
+	z-index: 8;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border: 0px;
+}
+
+#find-input-plataform-icon {
+	position: absolute;
+	margin: 23%;
+	height: 16px;
+	width: 16px;
+	background-image: url("../../web/icons/imageres/find light.png");
+	background-size: 16px 16px;
+}
+
+.find-input-container {
+	display: flex;
+	width: 14%;
+	height: 28px;
+}
+
+.header {
+	font-family: Roboto Bold;
+	font-size: 24px;
+}
+
+.taskbar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(255, 255, 255, .4);
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	border: 0px;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	width: 100%;
+	height: 36px;
+	z-index: 4;
+	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+}
+
+.taskbutton {
+	position: absolute;
+	outline: none;
+	top: 0;
+	border: 0px;
+	background-color: rgba(255, 255, 255, 0);
+	width: 36px;
+	height: 100%;
+}
+
+.taskbutton:hover {
+	border: 0px;
+	background-color: rgba(0, 0, 0, 0.15);
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.taskbutton:active {
+	border: 0px;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.blur {
+	backdrop-filter: blur(8px);
+}
+
+#menu {
+	background-image: url("../../web/icons/imageres/clogo.png");
+	background-repeat: no-repeat;
+	background-size: 16px 16px;
+	background-position: center;
+	outline: none;
+	z-index: 5;
+	left: 8px;
+}
+
+#settings {
+	background-image: url("../../web/icons/imageres/settings.png");
+	background-repeat: no-repeat;
+	background-size: 16px 16px;
+	background-position: center;
+	outline: none;
+	z-index: 6;
+	left: 48px;
+}
+
+#notifications {
+	background-image: url("../../web/icons/imageres/notification.png");
+	background-repeat: no-repeat;
+	background-size: 16px 16px;
+	background-position: center;
+	outline: none;
+	z-index: 7;
+	right: 8px;
+}
+
+.menu {
+	position: absolute;
+	animation: slidedown 0.35s;
+	display: none;
+	top: 44px;
+	left: 8px;
+	background-color: rgba(255, 255, 255, .4);
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	border: 0px;
+	border-radius: 8px;
+	z-index: 3;
+	width: 180px;
+	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+	z-index: -1;
+}
+
+@keyframes slidedown{
+	from {top: -120px;}
+	to {top: 44px;}
+}
+
+.menubutton {
+	position: relative;
+	font-family: Roboto Light;
+	font-size: 15px;
+	padding-left: 10px;
+	text-align: left;
+	border: 0px;
+	outline: none;
+	background-color: rgba(255, 255, 255, 0);
+	height: 35px;
+	width: 100%;
+}
+
+.menubutton:hover {
+	position: relative;
+	border: 0px;
+	border-radius: 8px;
+	background-color: rgba(0, 0, 0, 0.05);
+	width: 100%;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.menubutton:active {
+	position: relative;
+	border: 0px;
+	border-radius: 8px;
+	background-color: rgba(0, 0, 0, 0.1);
+	width: 100%;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+.userpicture {
+	position: absolute;
+	height: 30px;
+	width: 30px;
+	background-image: url("../../../../userdata/default/Data/picture.jpg");
+	background-repeat: no-repeat;
+	background-size: 30px 30px;
+	background-position: center;
+	border-radius: 1000px;
+	border: 2px solid black;
+}
+
+.settingsmenu {
+	position: absolute;
+	display: none;
+	animation: slidedown 0.35s;
+	top: 44px;
+	left: 48px;
+	background-color: rgba(255, 255, 255, .4);
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	border: 0px;
+	border-radius: 8px;
+	width: 180px;
+	z-index: 3;
+	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+}
+
+.settingsmenu-header {
+	position: static;
+	font-size: 16px;
+	text-align: center;
+	background-color: rgba(0, 0, 0, .05);
+	padding: 8px 0;
+	
+}
+
+.notificationsmenu {
+	position: absolute;
+	display: none;
+	animation: slidedown 0.35s;
+	top: 44px;
+	right: 8px;
+	background-color: rgba(255, 255, 255, .4);
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	border: 0px;
+	border-radius: 8px;
+	width: 300px;
+	z-index: 3;
+	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+}
+
+.notmenu-header {
+	font-size: 16px;
+	width: 100%;
+	position: static;
+	border-bottom: 1px solid rgba(0, 0, 0, .0);
+	background-color: rgba(0, 0, 0, .05);
+	border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+	padding: 8px 0;
+	margin-bottom: 8px;
+	text-align: center;
+	padding-left: 0px;
+	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.0);
+	z-index: 1;
+}
+
+.notificationsmenu-space {
+	font-size: 16px;
+	width: 100%;
+	background-color: rgba(0, 0, 0, .0);
+	position: static;
+	padding: 18px 0;
+	text-align: center;
+	padding-left: 0px;
+	
+}
+
+.notificationbutton {
+	position: relative;
+	font-family: Roboto Bold;
+	font-size: 15px;
+	outline: none;
+	padding-top: 26px;
+	padding-left: 10px;
+	text-align: center;
+	border: 0px;
+	border-radius: 8px;
+	background-color: rgba(255, 255, 255, 0.25);
+	margin-bottom: 8px;
+	width: 95%;
+	left: 2.5%;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.notificationbutton:hover {
+	position: relative;
+	font-family: Roboto Bold;
+	font-size: 15px;
+	padding-left: 10px;
+	text-align: center;
+	border: 0px;
+	border-radius: 8px;
+	background-color: rgba(215, 215, 215, 0.25);
+	margin-bottom: 8px;
+	width: 95%;
+	left: 2.5%;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+}
+
+.notificationbutton:active {
+	position: relative;
+	font-family: Roboto Bold;
+	font-size: 15px;
+	padding-left: 10px;
+	text-align: center;
+	border: 0px;
+	border-radius: 8px;
+	background-color: rgba(160, 160, 160, 0.25);
+	margin-bottom: 8px;
+	width: 95%;
+	left: 2.5%;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.notification-header {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	font-size: 16px;
+	width: 100%;
+	background-color: rgba(0, 0, 0, .05);
+	border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+	padding: 4px 0;
+	text-align: center;
+	padding-left: 0px;
+	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.0);
+	z-index: 1;
+}
+
+.notification-content {
+	position: static;
+	font-family: Roboto Light;
+	font-size: 16px;
+	text-align: left;
+	left: 0px;
+	width: 100%;
+	background-color: rgba(0, 0, 0, .0);
+	padding: 4px 0;
+	text-align: left;
+	padding-left: 0px;
+	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.0);
+	z-index: 1;
+}
+
+.findmenu {
+	position: absolute;
+	display: none;
+	animation: slidedown 0.35s ease-out;
+	top: 44px;
+	left: 90px;
+	background-color: rgba(255, 255, 255, .4);
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	border: 0px;
+	border-radius: 8px;
+	width: 200px;
+	z-index: 3;
+	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+}
+
+.findmenu-header {
+	font-size: 16px;
+	width: 100%;
+	position: static;
+	border-bottom: 1px solid rgba(0, 0, 0, .0);
+	background-color: rgba(0, 0, 0, .05);
+	border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+	padding: 8px 0;
+	margin-bottom: 8px;
+	text-align: left;
+	padding-left: 12px;
+	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.0);
+	z-index: 1;
+}
+
+.findmenubutton {
+	position: relative;
+	font-family: Roboto Bold;
+	font-size: 15px;
+	outline: none;
+	padding-top: 26px;
+	padding-left: 10px;
+	text-align: center;
+	border: 0px;
+	border-radius: 8px;
+	background-color: rgba(255, 255, 255, 0.25);
+	margin-bottom: 8px;
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.desktop-icon {
+	position: relative;
+	top: 40px;
+	left: 4px;
+	height: 80px;
+	width: 85px;
+	z-index: -12;
+}
+
+.desktop-icon-picture {
+	position: absolute;
+	margin: auto;
+	top: 0px;
+	left: 0px;
+	height: 40px;
+	width: 45px;
+}

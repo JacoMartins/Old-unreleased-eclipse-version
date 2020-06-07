@@ -1,0 +1,44 @@
+@font-face {
+  font-family: Terminal;
+  src: url('../../../fonts/terminal.ttf'); format('truetype');
+}
+
+body {
+	background-color: black;
+	overflow: hidden;
+}
+
+.text {
+	position: relative;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	Top: -2px;
+	Left: 15px;
+	font-family: Terminal;
+	font-size: 18px;
+	line-height: 2px;
+	color: lightgray;
+}
+
+.prompt {
+	animation: blinker 0.5s step-start infinite;
+	position: relative;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	Top: -2px;
+	Left: 15px;
+	font-family: Terminal;
+	font-size: 18px;
+	line-height: 2px;
+	color: lightgray;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
