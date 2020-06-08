@@ -2,12 +2,14 @@
 <html>
 	<head>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
-		<link rel="stylesheet" type="text/css" href="../../resources/css/themes/fluent.css">
 		<link rel="stylesheet" type="text/css" href="../../boot/boot.css">
+		<link rel="stylesheet" type="text/css" href="../../resources/css/themes/fluent.css">
 		<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
-		<script type="text/javascript" src="../menuconfig.js"></script>
 		<script type="text/javascript" src="../boot.js"></script>
+		<script type="text/javascript" src="../menuconfig.js"></script>
 		<script type="text/javascript" src="../progress.js"></script>
+		<script type="text/javascript" src="../clockconfig.js"></script>
+		<script type="text/javascript" src="../windowconfig.js"></script>
 	</head>
 	<body>
 		<title>CES - UI</title>
@@ -32,6 +34,9 @@
 				</div>
 				<button class="taskbutton" id="settings" onclick="settingsmenutoggle()">
 				</button>
+				<div class="taskbutton clockplataform">
+					<div class="clock" id="taskbar-clock"></div>
+				</div>
 				<button class="taskbutton" id="notifications" onclick="notificationsmenutoggle()">
 				</button>
 			</div>
@@ -74,6 +79,18 @@
 			</div>
 			<div class="desktop-icon">
 				<div class="desktop-icon-picture"></div>
+			</div>
+			
+			<div class="window blur" id="window">
+				<div class="window-header" id="windowheader">
+					<button class="window-header-close"></button>
+					<button class="window-header-maximize"></button>
+					<button class="window-header-minimize"></button>
+					<p class="window-header-title">first window beta</p>
+				</div>
+				<div class="window-content">
+					<button class="button">Test</button>
+				</div>
 			</div>
 	</body>
 </html>

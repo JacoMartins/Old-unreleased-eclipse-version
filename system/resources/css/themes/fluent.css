@@ -74,6 +74,39 @@ body {
 	font-size: 16px;
 }
 
+.button {
+	position: absolute;
+	font-family: Roboto;
+	font-size: 16px;
+	border-radius: 6px;
+	right: 12px;
+	bottom: 12px;
+	height: 28px;
+	padding-left: 12px;
+	padding-right: 12px;
+	background-color: rgba(0, 0, 0, 0.1);
+	border: 0px;
+	outline: 0px;
+}
+
+@keyframes hover {
+	from{background-color: rgba(0, 0, 0, 0.1);}
+	to{background-color: rgba(0, 0, 65, 0.2);}
+}
+
+.button:hover {
+	animation: hover 0.25s;
+	background-color: rgba(0, 0, 65, 0.2);
+	box-shadow: 0px 0px 30px rgba(0, 0, 65, 0.1);
+}
+
+.button:active {
+	background-color: rgba(0, 0, 65, 0.3);
+	box-shadow: 0px 0px 30px rgba(0, 0, 65, 0.3);
+	
+	
+}
+
 .textinput {
 	position: absolute;
 	font-family: Roboto Light;
@@ -263,7 +296,7 @@ body {
 }
 
 @keyframes slidedown{
-	from {top: -120px;}
+	from {top: -14px;}
 	to {top: 44px;}
 }
 
@@ -512,8 +545,25 @@ body {
 	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 }
 
+.clockplataform {
+	position: absolute;
+	width: 155px;
+	text-align: center;
+	right: 48px;
+	font-family: Roboto;
+	font-size: 16px;;
+}
+
+.clock {
+	padding-top: 8.6px;
+	text-align: center;
+	font-family: Roboto Bold;
+	font-size: 16px;
+}
+
 .desktop-icon {
 	position: relative;
+	display: none;
 	top: 40px;
 	left: 4px;
 	height: 80px;
@@ -528,4 +578,101 @@ body {
 	left: 0px;
 	height: 40px;
 	width: 45px;
+}
+
+.window {
+	position: absolute;
+	z-index: 0;
+	width: 360px;
+	height: 240px;
+	background-color: rgba(255, 255, 255, .4);
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	border: 0px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+}
+
+.window-header {
+	position: relative;
+	z-index: 1;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 37px;
+}
+
+.window-header-close {
+	position: absolute;
+	z-index: 1;
+	border: 0px;
+	border-radius: 3px;
+	outline: none;
+	top: 10px;
+	left: 10px;
+	background-image: url("../../web/icons/imageres/close.png");
+	background-repeat: no-repeat;
+	background-size: 16px 16px;
+	background-color: rgba(0, 0, 0, 0);
+	width: 16px;
+	height: 16px;
+}
+
+.window-header-maximize {
+	position: absolute;
+	z-index: 1;
+	border: 0px;
+	border-radius: 3px;
+	outline: none;
+	top: 10px;
+	left: 30px;
+	background-image: url("../../web/icons/imageres/max.png");
+	background-repeat: no-repeat;
+	background-size: 16px 16px;
+	background-color: rgba(0, 0, 0, 0);
+	width: 16px;
+	height: 16px;
+}
+
+.window-header-minimize {
+	position: absolute;
+	z-index: 1;
+	border: 0px;
+	border-radius: 3px;
+	outline: none;
+	top: 10px;
+	left: 50px;
+	background-image: url("../../web/icons/imageres/min.png");
+	background-repeat: no-repeat;
+	background-size: 16px 16px;
+	background-color: rgba(0, 0, 0, 0);
+	width: 16px;
+	height: 16px;
+}
+
+.window-header-title {
+	position: relative;
+	top: 9px;
+	font-family: Roboto;
+	font-size: 16px;
+	text-align: center;
+	margin: auto;
+}
+
+.window-content {
+	position: relative;
+	z-index: 1;
+	border: 0px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	outline: none;
+	top: 0px;
+	left: 0px;
+	background-color: rgba(255, 255, 255, 1);
+	width: 100%;
+	height: calc(100% - 37px);
 }
