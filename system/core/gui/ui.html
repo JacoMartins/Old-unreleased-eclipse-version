@@ -3,19 +3,23 @@
 	<head>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
 		<link rel="stylesheet" type="text/css" href="../../boot/boot.css">
-		<link rel="stylesheet" type="text/css" href="../../resources/css/themes/fluent.css">
+		<link id="themesfluent" rel="stylesheet" type="text/css" href="../../resources/css/themes/fluent.css">
+		<link id="settings-appui" rel="stylesheet" type="text/css" href="../api/Settings/6.0/res/appui.css">
 		<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
 		<script type="text/javascript" src="../boot.js"></script>
 		<script type="text/javascript" src="../menuconfig.js"></script>
 		<script type="text/javascript" src="../progress.js"></script>
 		<script type="text/javascript" src="../clockconfig.js"></script>
 		<script type="text/javascript" src="../windowconfig.js"></script>
+		<script type="text/javascript" src="/drive1/application/Workbench/docens10/bin/windowconfig.js"></script>
+		<script type="text/javascript" src="/drive1/system/core/api/Settings/6.0/bin/windowconfig.js"></script>
 	</head>
-	<body>
-		<title>CES - UI</title>
+	<body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
+		<title>CES - Kernel</title>
 			<div class="bootscreen">
-				<a class="logotext">CHEETAH</a>
-				<a id ="estext" class="text">Emulated System</a>
+				<a id ="codtext" class="text">project</a>
+				<a class="logotext">sunset</a>
+				<a id ="estext" class="text">Beta 1 Stage 2</a>
 				<div class="progressbar" id="progressbar">
 					<div class="progress" id="progress">
 					</div>
@@ -30,7 +34,7 @@
 						<div id="find-input-plataform-icon">
 						</div>
 					</div>
-					<input type="text" class="find-input-field" placeholder="Find on cloud" onkeypress="findmenutoggle()"></input>
+					<input type="text" id="systemtextinputfind" class="find-input-field" placeholder="Find on cloud" onkeydown="findmenublock()" onfocusout="findmenunone()"></input>
 				</div>
 				<button class="taskbutton" id="settings" onclick="settingsmenutoggle()">
 				</button>
@@ -40,22 +44,22 @@
 				<button class="taskbutton" id="notifications" onclick="notificationsmenutoggle()">
 				</button>
 			</div>
-			<div class="menu blur" id="systemmenu">
+			<div class="menu blur" id="systemmenu" style="display: none;">
 				<button class="menubutton">Calculator</button>
 				<button class="menubutton">Command Prompt</button>
 				<button class="menubutton">Escriber</button>
 				<button class="menubutton">Media Player</button>
-				<button class="menubutton">Settings</button>
-				<button class="menubutton">Workspace</button>
-				<button class="menubutton">Visio</button>
-				<button class="menubutton" style="font-family: Roboto Bold; padding-left: 0px; height: 45px;;">
+				<button class="menubutton" onclick="settings6windowopen()">Settings</button>
+				<button class="menubutton">Workbench</button>
+				<button class="menubutton" onclick="docens10windowopen()">Docens</button>
+				<button class="menubutton" style="font-family: Roboto Bold; padding-left: 0px; height: 45px;">
 					<div class="userpicture" style="top: 6px; left: 12px;"></div>
 					<a class="inftext" style="position: absolute; top: 6px; left: 52px; font-size: 14px;">Jaco Martins</a>
 					<a class="inftext" style="position: absolute; top: 22px; left: 52px; font-family: Roboto Light; font-size: 15px;">Administrator</a>
 				</button>
 			</div>
 			
-			<div class="settingsmenu blur" id="systemsettingsmenu">
+			<div class="settingsmenu blur" id="systemsettingsmenu" style="display: none;">
 				<div class="settingsmenu-header header">Settings</div>
 				<button class="menubutton">Customization</button>
 				<button class="menubutton">Profile</button>
@@ -63,33 +67,57 @@
 				<button class="menubutton">About</button>
 			</div>
 			
-			<div class="notificationsmenu blur" id="systemnotificationsmenu">
+			<div class="notificationsmenu blur" id="systemnotificationsmenu" style="display: none;">
 					<div class="notmenu-header header">Notifications</div>
-					<button class="notificationbutton">
+					<button class="notification">
 						<div class="notification-header header">Welcome to cheetah 5.0!</div>
 						<div class="notification-content">I can see you joined to cheetah recently. Wanna go to a tour or tutorial?
 						</div>
 					</button>
-					<button class="menubutton">Clear all</button>
+					<button class="notificationbutton">Clear all</button>
 			</div>
 			
-			<div class="findmenu blur">
+			<div class="findmenu blur" id="systemfindmenu" style="display: none;">
 				<div class="findmenu-header header" id="systemfindmenu">Results for</div>
-				<button class="findmenubutton">Result1</button>
+				<button class="findmenubutton">Office</button>
 			</div>
 			<div class="desktop-icon">
 				<div class="desktop-icon-picture"></div>
 			</div>
 			
-			<div class="window blur" id="window">
-				<div class="window-header" id="windowheader">
-					<button class="window-header-close"></button>
-					<button class="window-header-maximize"></button>
+			<div class="window blur" id="docens10" style="top: 42px; left: 48px; width: 800px; height: 600px; display: none;">
+				<div class="window-header" id="docens10-header">
+					<button class="window-header-close" onclick="docens10windowclose()"></button>
+					<button class="window-header-maximize" onclick="docens10windowmaximize()";></button>
 					<button class="window-header-minimize"></button>
-					<p class="window-header-title">first window beta</p>
+					<p class="window-header-title">Workbench Docens</p>
 				</div>
-				<div class="window-content">
-					<button class="button">Test</button>
+				<div class="default-window-content">
+					<input type="text" class="textinput" placeholder="Email or phone" style="position: absolute; top: 50%;
+					left: 50%;
+					transform: translate(-50%, -270%) scale(1);"></input>
+					<input type="password" class="textinput" placeholder="Password" style="position: absolute; top: 50%;
+					left: 50%;
+					transform: translate(-50%, -156%) scale(1);"></input>
+					<button class="button" style="position: absolute; top: 50%;
+					left: 50%;
+					transform: translate(-210%, -20%) scale(1);">
+					Next
+					</button>
+				</div>
+			</div>
+			
+			<div class="window blur" id="settings6" style="display: none;">
+				<div class="window-header" id="settings6-header">
+					<button class="window-header-close" onclick="settings6windowclose()"></button>
+					<button class="window-header-maximize" id="settings6-header-sizingbackground" onclick="settings6windowmaximize()";></button>
+					<button class="window-header-minimize"></button>
+				</div>
+				<div class="custom-window-content" id="settings6-window-content">
+					
+				</div>
+				<div class="custom-window-sidebar" id="settings6-window-sidebar">
+					<p class="window-header-title" id="settings6-header-title">System Settings</p>
 				</div>
 			</div>
 	</body>

@@ -3,9 +3,9 @@ dragElement(document.getElementById("window"));
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById("header")) {
+  if (document.getElementById("window-header")) {
     /* if present, the header is where you move the DIV from:*/
-    document.getElementById("windowheader").onmousedown = dragMouseDown;
+    document.getElementById("window-header").onmousedown = dragMouseDown;
   } else {
     /* otherwise, move the DIV from anywhere inside the DIV:*/
     elmnt.onmousedown = dragMouseDown;
@@ -43,3 +43,35 @@ function dragElement(elmnt) {
 }
 
 });
+
+function windowwindowopen() {
+	var window = document.getElementById("window");
+	var menuid = document.getElementById("systemmenu");
+	if (window.style.display === "none") {
+		window.style.display = "block";
+		systemmenu.style.display = "none";
+	}
+} 
+
+function windowwindowclose() {
+	var window = document.getElementById("window");
+	var menuid = document.getElementById("systemmenu");
+	if (window.style.display === "block") {
+		window.style.display = "none";
+		systemmenu.style.display = "none";
+	}
+} 
+
+function windowwindowmaximize() {
+	var window = document.getElementById("window");
+	
+	if (window.style.width === '100%') {
+		window.style.width = "800px";
+		window.style.height = "600px";
+	} else {
+		window.style.width = '100%';
+		window.style.height = 'calc(100% - 36px)';
+		window.style.top = "36px";
+		window.style.left = "0px"; 
+	}
+}
