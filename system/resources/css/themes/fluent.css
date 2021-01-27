@@ -10,7 +10,7 @@
 }
 
 @font-face {
-  font-family: Roboto;
+  font-family: Roboto Italic;
   src: url("../../../fonts/Roboto-Italic.ttf") format("truetype");
   font-weight: normal;
   font-style: italic;
@@ -24,99 +24,99 @@
 }
 
 @font-face {
-  font-family: Roboto Bold Italic;
+  font-family: 'Roboto Bold Italic';
   src: url("../../../fonts/Roboto-BoldItalic.ttf") format("truetype");
   font-weight: bold;
   font-style: italic;
 }
 
 @font-face {
-  font-family: Roboto Thin;
+  font-family: 'Roboto Thin';
   src: url("../../../fonts/Roboto-Thin.ttf") format("truetype");
   font-weight: thin;
   font-style: normal;
 }
 
 @font-face {
-  font-family: Roboto Thin Italic;
-  src: url("../../../../fonts/Roboto-ThinItalic.ttf"), format("truetype");
+  font-family: 'Roboto Thin Italic';
+  src: url("../../../../fonts/Roboto-ThinItalic.ttf") format("truetype");
   font-weight: thin;
   font-style: italic;
 }
 
 @font-face {
-  font-family: Roboto Light;
-  src: url("../../../../fonts/Roboto-Light.ttf"), format("truetype");
+  font-family: 'Roboto Light';
+  src: url("../../../../fonts/Roboto-Light.ttf") format("truetype");
   font-weight: light;
   font-style: normal;
 }
 
 @font-face {
-  font-family: Roboto Light Italic;
-  src: url("../../../../fonts/Roboto-LightItalic.ttf"), format("truetype");
+  font-family: 'Roboto Light Italic';
+  src: url("../../../../fonts/Roboto-LightItalic.ttf") format("truetype");
   font-weight: light;
   font-style: italic;
 }
 
 @font-face {
-  font-family: Helvetica;
-  src: url("../../../fonts/HelveticaNeue-Medium.ttf"), format("truetype");
+  font-family: 'Helvetica';
+  src: url("../../../fonts/HelveticaNeue-Medium.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: Helvetica Bold;
-  src: url("../../../fonts/HelveticaNeue-Bold.ttf"), format("truetype");
+  font-family: 'Helvetica Bold';
+  src: url("../../../fonts/HelveticaNeue-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
-  font-family: Helvetica Bold Italic;
-  src: url("../../../fonts/HelveticaNeue-BoldItalic.ttf"), format("truetype");
+  font-family: 'Helvetica Bold Italic';
+  src: url("../../../fonts/HelveticaNeue-BoldItalic.ttf") format("truetype");
   font-weight: bold;
   font-style: italic;
 }
 
 @font-face {
-  font-family: Helvetica Light;
-  src: url("../../../../fonts/HelveticaNeue-Light.ttf"), format("truetype");
+  font-family: 'Helvetica Light';
+  src: url("../../../../fonts/HelveticaNeue-Light.ttf") format("truetype");
   font-weight: light;
   font-style: normal;
 }
 
 @font-face {
-  font-family: Helvetica Light Italic;
-  src: url("../../../../fonts/HelveticaNeue-LightItalic.ttf"), format("truetype");
+  font-family: 'Helvetica Light Italic';
+  src: url("../../../../fonts/HelveticaNeue-LightItalic.ttf") format("truetype");
   font-weight: light;
   font-style: italic;
 }
 
 @font-face {
-  font-family: Helvetica Thin;
-  src: url("../../../../fonts/HelveticaNeue-Thin.ttf"), format("truetype");
+  font-family: 'Helvetica Thin';
+  src: url("../../../../fonts/HelveticaNeue-Thin.ttf") format("truetype");
   font-weight: thin;
   font-style: normal;
 }
 
 @font-face {
-  font-family: Helvetica Thin Italic;
-  src: url("../../../../fonts/HelveticaNeue-Thin.ttf"), format("truetype");
+  font-family: 'Helvetica Thin Italic';
+  src: url("../../../../fonts/HelveticaNeue-Thin.ttf") format("truetype");
   font-weight: thin;
   font-style: italic;
 }
 
 @font-face {
-  font-family: Helvetica Heavy;
-  src: url("../../../../fonts/HelveticaNeue-Heavy.ttf"), format("truetype");
+  font-family: 'Helvetica Heavy';
+  src: url("../../../../fonts/HelveticaNeue-Heavy.ttf") format("truetype");
   font-weight: heavy;
   font-style: normal;
 }
 
 @font-face {
-  font-family: Helvetica Heavy Italic;
-  src: url("../../../../fonts/HelveticaNeue-HeavyItalic.ttf"), format("truetype");
+  font-family: 'Helvetica Heavy Italic';
+  src: url("../../../../fonts/HelveticaNeue-HeavyItalic.ttf") format("truetype");
   font-weight: heavy;
   font-style: italic;
 }
