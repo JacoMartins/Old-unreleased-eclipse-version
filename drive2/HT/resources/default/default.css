@@ -1,0 +1,396 @@
+body {
+	overflow: hidden;
+	cursor: url("/drive2/HT/cursors/arrow.png");
+}
+
+.desktop {
+	position: absolute;
+	background-image: url("/drive2/HT/resources/default/web/background/1.jpg");
+	background-color: #3a6ea5;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	background-position: center;
+	height: 100%;
+	width: 100%;
+	left: 0px;
+	top: 0px;
+	cursor: url("/drive2/HT/cursors/arrow.png");
+	z-index: -1;
+}
+
+.inftext {
+	font-family: MS Sans Serif;
+	font-size: 16px;
+}
+
+.text {
+	font-family: MS Sans Serif;
+	font-size: 16px;
+}
+
+.button {
+	position: absolute;
+	font-family: MS Sans Serif;
+	font-size: 12px;
+	border-top: 1px solid #FFF;
+	border-left: 1px solid #FFF;
+	border-right: 1px solid #616161;
+	border-bottom: 1px solid #616161;
+	box-shadow: 1px 1px 0px black;
+	background-color: rgba(192, 192, 192, 1);
+	height: 20px;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+.button:focus {
+	outline: 1px solid black;
+}
+
+.button:active {
+	border-top: 1px solid rgba(128, 128, 128, 1);
+	border-left: 1px solid rgba(128, 128, 128, 1);
+	border-right: 1px solid rgba(128, 128, 128, 1);
+	border-bottom: 1px solid rgba(128, 128, 128, 1);
+	box-shadow: 0px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.textinput {
+	position: absolute;
+	font-family: MS Sans Serif;
+	font-size: 16px;
+	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+	padding-left: 10px;
+	top: 7.5%;
+	left: 90px;
+	height: 32px;
+	width: 100%;
+	border-radius: 5px;
+	border: 0px;
+}
+
+.header {
+	font-family: MS Sans Serif;
+	font-size: 24px;
+}
+
+.taskbar {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(192, 192, 192, 1);
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	border-top: 1px solid rgba(255, 255, 255, 1);
+	outline: 1px solid rgba(192, 192, 192, 1);
+	width: 100%;
+	height: 26px;
+	z-index: 4;
+}
+
+.taskbutton {
+	position: absolute;
+	top: 0;
+	border-top: 1px solid #FFF;
+	border-left: 1px solid #FFF;
+	border-right: 1px solid #616161;
+	border-bottom: 1px solid #616161;
+	box-shadow: 1px 1px 0px black;
+	background-color: rgba(192, 192, 192, 1);
+	width: 19px;
+	height: 19px;
+}
+
+.taskbutton:active {
+	border-top: 1px solid #616161;
+	border-left: 1px solid #616161;
+	border-right: 1px solid #FFF;
+	border-bottom: 1px solid #FFF;
+	box-shadow: -1px -1px 0px black;
+	background-color: rgba(192, 192, 192, 1);
+}
+
+.active {
+	position: absolute;
+	top: 0;
+	border-top: 1px solid #616161;
+	border-left: 1px solid #616161;
+	border-right: 1px solid #FFF;
+	border-bottom: 1px solid #FFF;
+	box-shadow: -1px -1px 0px black;
+	background-color: rgba(192, 192, 192, 1);
+	width: 19px;
+	height: 19px;
+}
+
+#menu {
+	background-image: url("/drive2/HT/resources/default/web/icons/16/startlogo.png");
+	background-repeat: no-repeat;
+	background-size: 46px 16px;
+	background-position: 3px 2px;
+	font-weight: bold;
+	text-align: right;
+	outline: none;
+	width: 54px;
+	height: 21px;
+	z-index: 5;
+	top: 2px;
+	left: 2px;
+}
+
+.menu {
+	position: absolute;
+	animation: fadein 0.25s;
+	display: none;
+	bottom: 26px;
+	background-color: rgba(192, 192, 192, 1);
+	border-top: 1px solid #FFF;
+	border-left: 1px solid #FFF;
+	border-right: 1px solid #616161;
+	border-bottom: 1px solid #616161;
+	box-shadow: 1px 1px 0px black, -1px -1px 0px rgba(192, 192, 192, 1);
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	left: 2px;
+	z-index: 4;
+	width: 162px;
+}
+
+#menuversion {
+	position: relative;
+	background-image: url("/drive2/HT/resources/default/web/pictures/menuversion.png");
+	background-repeat: no-repeat;
+	background-size: 21px 231px;
+	background-position: 0px 0px;
+	top: 1px;
+	left: 1px;
+	height: 231px;
+	width: 21px;
+}
+
+@keyframes fadein{
+	from {opacity: 0.0;}
+	to {opacity: 1;}
+}
+
+.menubutton {
+	position: absolute;
+	font-family: MS Sans Serif;
+	border: 0px;
+	font-size: 12px;
+	padding-left: 10px;
+	text-align: left;
+	outline: none;
+	background-color: rgba(255, 255, 255, 0);
+	height: 32px;
+	top: 1px;
+	left: 21px;
+	width: calc(100% - 21px);
+}
+
+.menubutton:hover {
+	background-color: rgba(0, 0, 128, 1);
+	border: 0px;
+	color: white;
+}
+
+.clockplataform {
+	position: absolute;
+	border-top: 1px solid #616161;
+	border-left: 1px solid #616161;
+	border-right: 1px solid #FFF;
+	border-bottom: 1px solid #FFF;
+	width: 63px;
+	height: 20px;
+	text-align: center;
+	top: 2px;
+	right: 2px;
+	font-family: MS Sans Serif;
+	font-size: 16px;;
+}
+
+.clock {
+	padding-top: 4px;
+	text-align: center;
+	font-family: MS Sans Serif;
+	color: rgba(0, 0, 0, 1);
+	font-size: 12px;
+}
+
+.desktop-icon {
+	position: relative;
+	display: none;
+	top: 40px;
+	left: 4px;
+	height: 80px;
+	width: 85px;
+	z-index: -12;
+}
+
+.desktop-icon-picture {
+	position: absolute;
+	margin: auto;
+	top: 0px;
+	left: 0px;
+	height: 40px;
+	width: 45px;
+}
+
+.window {
+	position: absolute;
+	z-index: 0;
+	width: 220px;
+	height: 280px;
+	background-color: rgba(192, 192, 192, 1);
+	border-top: 1px solid #FFF;
+	border-left: 1px solid #FFF;
+	border-right: 1px solid #616161;
+	border-bottom: 1px solid #616161;
+	box-shadow: 1px 1px 0px black, -1px -1px 0px rgba(192, 192, 192, 1);
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	resize: both;
+}
+
+.window-header {
+	position: relative;
+	Color: #FFFFFF;
+	font-family: Arial;
+	font-weight: Bold;
+	z-index: 1;
+	background-color: rgba(0, 0, 128, 1);
+	top: 0px;
+	left: 0px;
+	width: calc(100% - 2px);
+	height: 18px;
+	margin: 1px;
+}
+
+.window-header-close {
+	position: absolute;
+	z-index: 1;
+	border-top: 1px solid #FFF;
+	border-left: 1px solid #FFF;
+	border-right: 1px solid rgba(128, 128, 128, 1);
+	border-bottom: 1px solid rgba(128, 128, 128, 1);
+	box-shadow: 1px 1px 0px black;
+	background-image: url("/drive2/HT/resources/default/web/icons/core/close.png");
+	background-repeat: no-repeat;
+	background-position: 3px 2px;
+	background-size: 8px 7px;
+	top: 2px;
+	right: 3px;
+	background-color: rgba(192, 192, 192, 1);
+	width: 15px;
+	height: 13px;
+}
+
+.window-header-close:active {
+	top: 3px;
+	right: 2px;
+	border-top: 1px solid rgba(128, 128, 128, 1);
+	border-left: 1px solid rgba(128, 128, 128, 1);
+	border-right: 1px solid #FFF;
+	border-bottom: 1px solid #FFF;
+	box-shadow: -1px -1px 0px black;
+}
+
+.window-header-maximize {
+	position: absolute;
+	z-index: 1;
+	border-top: 1px solid #FFF;
+	border-left: 1px solid #FFF;
+	border-right: 1px solid #616161;
+	border-bottom: 1px solid #616161;
+	box-shadow: 1px 1px 0px black;
+	background-image: url("/drive2/HT/resources/default/web/icons/core/maximize.png");
+	background-repeat: no-repeat;
+	background-position: 2px 1px;
+	background-size: 9px 9px;
+	top: 2px;
+	right: 21px;
+	background-color: rgba(192, 192, 192, 1);
+	width: 15px;
+	height: 13px;
+}
+
+.window-header-maximize:active {
+	top: 3px;
+	right: 20px;
+	border-top: 1px solid rgba(128, 128, 128, 1);
+	border-left: 1px solid rgba(128, 128, 128, 1);
+	border-right: 1px solid #FFF;
+	border-bottom: 1px solid #FFF;
+	box-shadow: -1px -1px 0px black;
+}
+
+.window-header-minimize {
+	position: absolute;
+	z-index: 1;
+	border-top: 1px solid #FFF;
+	border-left: 1px solid #FFF;
+	border-right: 1px solid #616161;
+	border-bottom: 1px solid #616161;
+	box-shadow: 1px 1px 0px black;
+	background-image: url("/drive2/HT/resources/default/web/icons/core/minimize.png");
+	background-repeat: no-repeat;
+	background-position: 3px 8px;
+	background-size: 6px 2px;
+	top: 2px;
+	right: 37px;
+	background-color: rgba(192, 192, 192, 1);
+	width: 15px;
+	height: 13px;
+}
+
+.window-header-minimize:active {
+	top: 3px;
+	right: 36px;
+	border-top: 1px solid rgba(128, 128, 128, 1);
+	border-left: 1px solid rgba(128, 128, 128, 1);
+	border-right: 1px solid #FFF;
+	border-bottom: 1px solid #FFF;
+	box-shadow: -1px -1px 0px black;
+}
+
+.window-header-title {
+	position: relative;
+	top: 2px;
+	left: 2px;
+	font-family: MS Sans Serif;
+	font-size: 12px;
+	text-align: left;
+	margin: auto;
+}
+
+.window-content {
+	position: relative;
+	z-index: 1;
+	border: 0px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	outline: none;
+	top: 0px;
+	left: 0px;
+	background-color: rgba(255, 255, 255, 1);
+	width: 100%;
+	height: calc(100% - 37px);
+}
+
+.window-content-transparent {
+	position: relative;
+	z-index: 1;
+	outline: none;
+	top: 0px;
+	left: 1px;
+	background-color: rgba(192, 192, 192, 1);
+	width: calc(100% - 2px);
+	height: calc(100% - 21px);
+}

@@ -1,12 +1,91 @@
-<!DOCTYPE html>
 <html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="system/resources/css/terminal/shell.css">
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
-		<script src="system/core/prompt.js"></script>
-		<meta http-equiv="refresh" content="4;URL='system/boot/bootmgr.html' " />
-	</head>
-	<body>
-		<title>CES - Finding System</title>
-	</body>
+<head>
+<style>
+@font-face {
+  font-family: Roboto;
+  src: url("drive1/system/fonts/default.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+	background-color: #f2f6f7;
+}
+
+.clogo {
+	position: absolute;
+	background-image: url("drive1/system/resources/web/icons/imageres/clogo.png");
+	background-color: rgba(255, 255, 255, 0);
+	background-repeat: no-repeat;
+	background-size: 16px 16px;
+	background-position: center;
+	-webkit-filter: brightness(0.1);
+    filter: brightness(0.1);
+	width: 16px;
+	height: 16px;
+	top: 25px;
+	left: 40px;
+}
+
+.header {
+	position: absolute;
+	font-family: Lucida Console;
+	letter-spacing: -0.8px;
+	font-size: 16px;
+}
+
+.selector {
+	position: relative;
+	text-decoration: none;
+	color: #000;
+	background-color: rgba(0, 0, 0, 0.0);
+	font-size: 16px;
+	font-family: Lucida Console;
+	padding-left: 0px;
+	padding-right: 0px;
+	width: 100%;
+	border: 0px;
+	outline: 0px;
+	text-align: left;
+}
+
+.selector:hover {
+	background-color: rgba(0, 0, 0, 1);
+	color: #FFF;
+	border: 0px;
+	outline: 0px;
+}
+
+.selector:focus {
+	background-color: rgba(0, 0, 0, 1);
+	text-decoration: underline;
+	color: #FFF;
+	border: 0px;
+	outline: 0px;
+}
+
+ol {
+	font-family: Lucida Console;
+}
+
+#bootlist {
+	position: absolute;
+	top: 66px;
+	left: 40px;
+	height: 60%;
+	width: 80%;
+}
+</style>
+</head>
+<body>
+	<div class="clogo"></div>
+	<a class="header" style="top: 25px; left: 66px;">Cheetah boot manager</a>
+	<div id="bootlist">
+		<ol>
+			<li><a class="selector" href="drive1/index.html">Cheetah Operating System Build 220 5.0</a></li>
+			<li><a class="selector" href="broadcast/index.php">Broadcast 2.2</a></li>
+			<li><a class="selector" href="drive2/index.html">Cheetah Operating System Beta Build 106 5.0</a></li>
+		</ol>
+	</div>
+</body>
 </html>
