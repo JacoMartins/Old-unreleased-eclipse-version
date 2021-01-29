@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+		<link rel="icon" href="/drive2/CESBACKUP/favicon.png" type="image/x-icon"/>
+		<link rel="stylesheet" type="text/css" href="/drive2/HT/boot/boot.css">
+		<link rel="stylesheet" type="text/css" href="/drive2/HT/resources/default/default.css">
+		<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+		<script type="text/javascript" src="/drive2/HT/boot/boot.js"></script>
+		<script type="text/javascript" src="/drive2/HT/system/menuconfig.js"></script>
+		<script type="text/javascript" src="/drive2/HT/system/progress.js"></script>
+		<script type="text/javascript" src="/drive2/HT/system/clockconfig.js"></script>
+		<script type="text/javascript" src="/drive2/HT/system/windowconfig.js"></script>
+	</head>
+	<body>
+		<title>User Interface</title>
+			<div class="bootscreen">
+			</div>
+			<div class="desktop" onmousedown="menulostfocus()"></div>
+			<div class="taskbar" id="taskbar">
+				<button class="taskbutton" id="menu" onclick="menutoggle()"></button>
+				<div class="clockplataform">
+					<div class="clock" id="taskbar-clock"></div>
+				</div>
+			</div>
+			<div class="menu" id="systemmenu" style="display: none;">
+				<div id="menuversion"></div>
+				<button class="menubutton">Programs</button>
+			</div>
+			
+			<div class="desktop-icon">
+				<div class="desktop-icon-picture"></div>
+			</div>
+			
+			<div class="window" id="window" onmousedown="windowfocus()">
+				<div class="window-header" id="windowheader">
+					<button class="window-header-close"></button>
+					<button class="window-header-maximize"></button>
+					<button class="window-header-minimize"></button>
+					<p class="window-header-title">Welcome</p>
+				</div>
+				<div class="window-content-transparent">
+					<button class="button" style="bottom: 4px; right: 3px;">Test</button>
+				</div>
+			</div>
+	</body>
+</html>
