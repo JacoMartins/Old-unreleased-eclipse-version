@@ -1,0 +1,28 @@
+.bootscreen {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+	background-image: url("/HT/boot/bootscreen.gif");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	z-index: 1000;
+}
+
+@keyframes progress{
+	0%{width: 0%; background-color: rgba(255, 0, 0, .6);}
+	25%{width: 25%; background-color: rgba(255, 255, 0, .6);}
+	50%{width: 50%; background-color: rgba(0, 255, 0, .6);}
+	75%{width: 75%; background-color: rgba(0, 255, 255, .6);}
+	100%{width: 100%; background-color: rgba(0, 0, 255, .6);}
+}
+
+.bootscreen.done {
+	animation: done 0.1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes done {
+	100% {background-color: rgba(255, 0, 0, .0); visibility: hidden;}
+}

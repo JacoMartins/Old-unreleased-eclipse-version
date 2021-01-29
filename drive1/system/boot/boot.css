@@ -1,0 +1,109 @@
+.bootscreen {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+	background-color: #000;
+	cursor: none;
+	z-index: 1000;
+}
+
+
+.clogo {
+	position: absolute;
+	cursor: none;
+	left: 50%;
+	margin-left: -30px;
+	top: 50%;
+	margin-top: -60px;
+	height: 60px;
+	width: 60px;
+	filter: brightness(0.25);
+	background-image: url("../resources/web/icons/imageres/clogo.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.text {
+	position: absolute;
+	cursor: none;
+	color: white;
+	font-family: Roboto;
+	font-size: 16px;
+}
+
+.logotext {
+	position: absolute;
+	cursor: none;
+	color: white;
+	font-family: Segoe UI Semibold;
+	letter-spacing: -2px;
+	font-size: 30px;
+	left: 50%;
+	margin-left: -74px;
+	top: 50%;
+	margin-top: -65px;
+	text-align: center;
+}
+
+#estext {
+	font-family: Roboto Medium;
+	cursor: none;
+	left: 50%;
+	margin-left: -73px;
+	top: 50%;
+	margin-top: -20px;
+}
+
+#codtext {
+	font-family: Roboto Medium;
+	cursor: none;
+	left: 50%;
+	margin-left: -73px;
+	top: 50%;
+	margin-top: -70px;
+}
+
+.progressbar {
+	position: absolute;
+	cursor: none;
+	border-radius: 2px;
+	height: 4px;
+	width: 120px;
+	left: 50%;
+	margin-left: -75px;
+	top: 50%;
+	margin-top: 12px;
+	background-color: rgba(255, 255, 255, .2);
+}
+
+.progress {
+	position: absolute;
+	animation: progress 2s linear;
+	cursor: none;
+	border-radius: 2px;
+	width: 40px;
+	height: 100%;
+	background-color: rgba(0, 200, 255, 1);
+	box-shadow: 0px 0px 15px rgba(0, 200, 255, 0.4);
+	animation-iteration-count: infinite;
+	animation-fill-mode: forwards;
+}
+
+@keyframes progress{
+	0%{left: 0px; width: 0px;}
+	25%{left: 0px; width: 40px;}
+	50%{left: 40px; width: 40px;}
+	75%{left: 80px; width: 40px;}
+	100%{left: 120px; width: 0px;}
+}
+
+.bootscreen.done {
+	animation: done 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes done {
+	100% {top: 100%; visibility: hidden;}
+}

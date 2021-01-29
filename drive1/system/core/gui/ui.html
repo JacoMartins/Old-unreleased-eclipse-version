@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.4.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../boot/boot.css">
+		<link id="themesfluent" rel="stylesheet" type="text/css" href="../../resources/css/themes/fluent.css">
+		<link id="settings-appui" rel="stylesheet" type="text/css" href="../api/Settings/6.0/res/appui.css">
+		<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+		<script type="text/javascript" src="../boot.js"></script>
+		<script type="text/javascript" src="../menuconfig.js"></script>
+		<script type="text/javascript" src="../progress.js"></script>
+		<script type="text/javascript" src="../clockconfig.js"></script>
+		<script type="text/javascript" src="../windowconfig.js"></script>
+		<script type="text/javascript" src="/drive1/application/Workbench/docens10/bin/windowconfig.js"></script>
+		<script type="text/javascript" src="/drive1/system/core/api/Settings/6.0/bin/windowconfig.js"></script>
+		<script type="text/javascript" src="/drive1/system/core/api/Settings/6.0/bin/categories.js"></script>
+	</head>
+	<body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
+		<title>CES - Kernel</title>
+			<div class="bootscreen">
+				<a id ="codtext" class="text">project</a>
+				<a class="logotext">sunset</a>
+				<a id ="estext" class="text">Beta 1 Stage 2</a>
+				<div class="progressbar" id="progressbar">
+					<div class="progress" id="progress">
+					</div>
+					<input type="hidden" id="progress_width" value="0">
+				</div>
+			</div>
+			<div class="taskbar blur">
+				<button class="taskbutton" id="menu" onclick="menutoggle()">
+				</button>
+				<div class="find-input-container">
+					<div id="find-input-plataform">
+						<div id="find-input-plataform-icon">
+						</div>
+					</div>
+					<input type="text" id="systemtextinputfind" class="find-input-field" placeholder="Find on cloud" onkeydown="findmenublock()" onfocusout="findmenunone()"></input>
+				</div>
+				<button class="taskbutton" id="settings" onclick="settingsmenutoggle()">
+				</button>
+				<div class="taskbutton clockplataform">
+					<div class="clock" id="taskbar-clock"></div>
+				</div>
+				<button class="taskbutton" id="notifications" onclick="notificationsmenutoggle()">
+				</button>
+			</div>
+			<div class="menu blur" id="systemmenu" style="display: none;">
+				<button class="menubutton">Calculator</button>
+				<button class="menubutton">Command Prompt</button>
+				<button class="menubutton">Escriber</button>
+				<button class="menubutton">Media Player</button>
+				<button class="menubutton" onclick="settings6windowopen()">Settings</button>
+				<button class="menubutton">Workbench</button>
+				<button class="menubutton" onclick="docens10windowopen()">Docens</button>
+				<button class="menubutton" style="font-family: Roboto Bold; padding-left: 0px; height: 45px;">
+					<div class="userpicture" style="top: 6px; left: 12px;"></div>
+					<a class="inftext" style="position: absolute; top: 6px; left: 52px; font-size: 14px;">Jaco Martins</a>
+					<a class="inftext" style="position: absolute; top: 22px; left: 52px; font-family: Roboto Light; font-size: 15px;">Administrator</a>
+				</button>
+			</div>
+			
+			<div class="settingsmenu blur" id="systemsettingsmenu" style="display: none;">
+				<div class="settingsmenu-header header">Settings</div>
+				<button class="menubutton">Account and users</button>
+				<button class="menubutton">Appearance</button>
+				<button class="menubutton">Applications</button>
+				<button class="menubutton">Language</button>
+				<button class="menubutton">Searching system</button>
+				<button class="menubutton">About</button>
+			</div>
+			
+			<div class="notificationsmenu blur" id="systemnotificationsmenu" style="display: none;">
+					<div class="notmenu-header header">Notifications</div>
+					<button class="notification">
+						<div class="notification-header header">Welcome to cheetah 5.0!</div>
+						<div class="notification-content">I can see you joined to cheetah recently. Wanna go to a tour or tutorial?
+						</div>
+					</button>
+					<button class="notificationbutton">Clear all</button>
+			</div>
+			
+			<div class="findmenu blur" id="systemfindmenu" style="display: none;">
+				<div class="findmenu-header header" id="systemfindmenu">Results for</div>
+				<button class="findmenubutton">Office</button>
+			</div>
+			<div class="desktop-icon">
+				<div class="desktop-icon-picture"></div>
+			</div>
+			
+			<div class="window blur" id="docens10" style="top: 42px; left: 48px; width: 800px; height: 600px; display: none;">
+				<div class="window-header" id="docens10-header">
+					<button class="window-header-close" onclick="docens10windowclose()"></button>
+					<button class="window-header-maximize" id="docens10-header-sizingbackground" onclick="docens10windowmaximize()";></button>
+					<button class="window-header-minimize"></button>
+					<p class="window-header-title">Workbench Docens</p>
+				</div>
+				<div class="default-window-content">
+					<input type="text" class="textinput" placeholder="Email or phone" style="position: absolute; top: 50%;
+					left: 50%;
+					transform: translate(-50%, -270%) scale(1);"></input>
+					<input type="password" class="textinput" placeholder="Password" style="position: absolute; top: 50%;
+					left: 50%;
+					transform: translate(-50%, -156%) scale(1);"></input>
+					<button class="button" style="position: absolute; top: 50%;
+					left: 50%;
+					transform: translate(-210%, -20%) scale(1);">
+					Next
+					</button>
+				</div>
+			</div>
+			
+			<div class="window blur" id="settings6" style="display: none;">
+				<div class="window-header" id="settings6-header">
+					<button class="window-header-close" onclick="settings6windowclose()"></button>
+					<button class="window-header-maximize" id="settings6-header-sizing" onclick="settings6windowmaximize()";></button>
+					<button class="window-header-minimize" id="settings6-header-minimize"></button>
+				</div>
+				<div class="custom-window-content" id="settings6-window-content">
+					<div id="settings6-content-appearance" style="display: none;">
+						<a class="bigheader" id="settings6-content-appearance-label">Appearance</a>
+						<div id="settings6-content-appearance-styles" style="display: block;">
+							<div class="multibutton-back" id="settings6-content-appearance-styles-multibutton-back">
+								<button class="multibutton" id="settings6-content-appearance-styles-multibutton-styles">Styles</button>
+								<button class="multibutton" id="settings6-content-appearance-styles-multibutton-color">Color</button>
+								<button class="multibutton" id="settings6-content-appearance-styles-multibutton-wallpapers">Wallpapers</button>
+							</div>
+							<a id="settings6-content-appearance-styles-labels-currentstyle">Current Style</a>
+							<div id="settings6-content-appearance-styles-buttonbox">
+								<button id="settings6-content-appearance-buttons-stylebutton">
+									<div id="settings6-content-appearance-buttons-stylebutton-demo">
+										<div id="settings6-content-appearance-styles-buttons-stylebutton-demo-window">
+											<div id="settings6-content-appearance-styles-buttons-stylebutton-demo-window-close"></div>
+											<div id="settings6-content-appearance-styles-buttons-stylebutton-demo-window-max"></div>
+											<div id="settings6-content-appearance-styles-buttons-stylebutton-demo-window-min"></div>
+											<div id="settings6-content-appearance-styles-buttons-stylebutton-demo-window-content"></div>
+										</div>
+									</div>
+									<a id="settings6-content-appearance-buttons-stylebutton-title">Fluent Blocks</a>
+									<a id="settings6-content-appearance-buttons-stylebutton-released">2021</a>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="custom-window-sidebar" id="settings6-window-sidebar">
+					<div id="settings6-header-title">System Settings
+						<button id="settings6-header-userpicture"></button>
+					</div>
+					<div id="settings6-sidebar-list">
+						<button class="settings6-sidebar-list-button" id="settings6-sidebar-list-button-accountandusers" onclick="callaccountandusers()">Account and users</button>
+						<button class="settings6-sidebar-list-button" id="settings6-sidebar-list-button-appearance" onclick="callappearance()">Appearance</button>
+						<button class="settings6-sidebar-list-button" id="settings6-sidebar-list-button-applications" onclick="callapplications()">Applications</button>
+						<button class="settings6-sidebar-list-button" id="settings6-sidebar-list-button-language" onclick="calllanguage()">Language</button>
+						<button class="settings6-sidebar-list-button" id="settings6-sidebar-list-button-searchingsystem" onclick="callsearchingsystem()">Searching system</button>
+					</div>
+				</div>
+			</div>
+	</body>
+</html>
